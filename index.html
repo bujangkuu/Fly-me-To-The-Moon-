@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://dekatutorial.github.io/styleGombalin.css" />
+    <link rel="stylesheet" href="https://dekatutorial.github.io/stylePopUp.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #fotoku {
+            width: 200px;
+            /* Set your desired width */
+            height: 200px;
+            /* Set your desired height */
+            border-radius: 50%;
+            /* Makes the image circular */
+            object-fit: cover;
+            /* Ensures the image covers the container */
+            display: block;
+            /* Center the image */
+            margin: 0 auto;
+            /* Center the image */
+        }
+    </style>
+    <script>
+        function popupku() {
+            var body = document.querySelector("body");
+            var pWm = document.createElement("a");
+            body.appendChild(pWm);
+        }
+    </script>
+
+    <title>Fly me To The Moon ❤️🌙</title>
+</head>
+
+<body id="body">
+    <div class="preload">
+        <p>Hallo Laili Amali Husna . . .</p>
+    </div>
+    <div class="open">
+        <div>
+            <div class="lope" onclick="ilang()">
+                <i class="love material-icons-sharp">favorite</i>
+            </div>
+            <h3>Click Here</h3>
+        </div>
+    </div>
+    <div id="bg"></div>
+    <img src="131.jpg" alt="" id="fotoku" />
+
+    <h2 id="hai">Halo Nico Robin</h2>
+    <h3 id="hia">⋆｡𖦹°⭒˚｡⋆⋆｡𖦹°⭒˚｡⋆⋆｡𖦹°⭒˚｡⋆⋅˚₊‧ ୨୧ ‧₊˚ 𖤐☆⋆｡𖦹°‧★</h3>
+
+    <div id="slider">
+        <p>(๑'ᴗ')ゞBagaimana Puasa kamu?</p>
+        <p>Semoga masih berjalan Lancar ibadah kamu ya(๑˃̵　ᴗ　˂̵)و</p>
+        <p>Cuaca sedang tidak menentu ╥﹏╥</p>
+        <p>aku harap kamu dalam keadaan sehat☆</p>
+        <p>I honestly miss you a lot</p>
+        <p>♡I miss everything good about u</p>
+        <p>Since the last time we met, I've never forgotten that night ☾.</p>
+        <p>Click this little Moon<span> 🌕</span></p>
+    </div>
+
+    <script>
+        var musik = "musik.mp3";
+        var foto = "131.jpg";
+        var background = "foto1.jpg";
+        var noWhatsapp = "6289636277896";
+
+        async function popUp() {
+            await swalo.fire({
+                title: "I know I should.",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "I didn't confess my feelings that night",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "When you're sad",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "but I can't help myself about this feeling.",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "I love you, moon",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "You have beautiful eyes",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "You have a beautiful heart and mind",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "Aku tidak mengharapkan 'transaksi love' diatasnya",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "Dalam artian balasan cinta darimu.",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "Tetapi jika kamu merasakan hal yang sama",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "Kita bisa menjalani nya dengan baik seperti kupu-kupu dan lebah⋆.˚🦋༘⋆๋࣭ ",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "Juga jika tidak,",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "(๑'ᴗ')ゞBatas ku hanya sampai mengagumimu, selebihnya Qs Yasin : 40🌅",
+                imageUrl: ""
+            });
+            await swalo.fire({
+                title: "   ✨🤍💗🌸🎀",
+                imageUrl: ""
+            });
+            kirimPesan();
+        }
+
+        $(window).on("load", function() {
+            $(".preload").fadeOut("slow");
+        });
+
+        var audio = new Audio(musik);
+        audio.autoplay = true;
+        audio.loop = true;
+
+        bg.style = 'background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("' + background + '");';
+        fotoku.src = foto;
+        popupku();
+
+        var swalo = Swal.mixin({
+            allowOutsideClick: false
+        });
+
+        async function kirimPesan() {
+            var {
+                value: pesan
+            } = await swalo.fire({
+                title: "Write a message Moon",
+                input: "text",
+                confirmButtonText: "Kirim"
+            });
+            if (pesan) {
+                await swalo.fire("The answer is sent to my WhatsApp");
+                location.assign("https://api.whatsapp.com/send?phone=" + noWhatsapp + "&text=" + pesan);
+            } else {
+                await swalo.fire({
+                    confirmButtonText: "Iya deh",
+                    title: "Jangan dikosongin ya :)"
+                });
+                kirimPesan();
+            }
+        }
+
+        document.querySelector("span").addEventListener("click", function() {
+            popUp();
+        });
+
+        var open = document.querySelector(".open");
+
+        function ilang() {
+            audio.play();
+            open.style = "transition: 1.5s ease-out all; opacity: 0; transform: scale(100) translateY(-20px); filter: brightness(0);";
+            setTimeout(function() {
+                open.style = "display:none;";
+            }, 1500);
+            setTimeout(function() {
+                fotoku.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);";
+            }, 500);
+            setTimeout(function() {
+                hai.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);";
+            }, 1400);
+            setTimeout(function() {
+                hia.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);";
+            }, 1800);
+            setTimeout(function() {
+                slider.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);";
+            }, 2200);
+        }
+    </script>
+</body>
+
+</html>
